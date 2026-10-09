@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT" pages="2">
+  <diagram id="classes" name="Diagrama de Classes">
+    <mxGraphModel dx="1094" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" value="PetCare - Diagrama de Classes" vertex="1">
+          <mxGeometry height="40" width="500" x="560" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="animal" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=14;" value="&lt;b&gt;ANIMAL&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- nome: String&lt;br&gt;- sexo: String&lt;br&gt;- cor: String&lt;br&gt;- nascimento: Date&lt;br&gt;- especie: Especie&lt;br&gt;- raca: Raca&lt;br&gt;- tutor: Tutor&lt;hr&gt;+ cadastrar(): void&lt;br&gt;+ editar(): void&lt;br&gt;+ excluir(): void" vertex="1">
+          <mxGeometry height="310" width="380" x="610" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="especie" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=14;" value="&lt;b&gt;ESPECIE&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- nome: String&lt;hr&gt;+ cadastrar(): void&lt;br&gt;+ editar(): void&lt;br&gt;+ excluir(): void" vertex="1">
+          <mxGeometry height="190" width="300" x="80" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="raca" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=14;" value="&lt;b&gt;RACA&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- nome: String&lt;br&gt;- especie: Especie&lt;hr&gt;+ cadastrar(): void&lt;br&gt;+ editar(): void&lt;br&gt;+ excluir(): void" vertex="1">
+          <mxGeometry height="230" width="300" x="1130" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tutor" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=14;" value="&lt;b&gt;TUTOR&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- nome: String&lt;br&gt;- telefone: String&lt;hr&gt;+ cadastrar(): void&lt;br&gt;+ editar(): void&lt;br&gt;+ excluir(): void" vertex="1">
+          <mxGeometry height="220" width="380" x="610" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" edge="1" parent="1" source="especie" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" target="animal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RKE1PPqUyPVn517WA6jL-2" connectable="0" parent="c1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1 :&amp;nbsp; N" vertex="1">
+          <mxGeometry relative="1" x="0.0143" y="-4" as="geometry">
+            <mxPoint x="9" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c2" edge="1" parent="1" source="raca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" target="animal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RKE1PPqUyPVn517WA6jL-3" connectable="0" parent="c2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="N : 1" vertex="1">
+          <mxGeometry relative="1" x="0.1086" y="3" as="geometry">
+            <mxPoint x="-3" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3" edge="1" parent="1" source="tutor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" target="animal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RKE1PPqUyPVn517WA6jL-4" connectable="0" parent="c3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="N&lt;div&gt;-&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.1368" y="-3" as="geometry">
+            <mxPoint x="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c4" edge="1" parent="1" source="especie" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" target="raca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RKE1PPqUyPVn517WA6jL-1" connectable="0" parent="c4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1 : N" vertex="1">
+          <mxGeometry relative="1" x="0.0423" y="-3" as="geometry">
+            <mxPoint y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="mer" name="MER - Banco de Dados">
+    <mxGraphModel dx="1609" dy="837" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" value="PetCare - Modelo Entidade-Relacionamento (MER)" vertex="1">
+          <mxGeometry height="40" width="650" x="470" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m_especie" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=14;" value="&lt;b&gt;ESPECIE&lt;/b&gt;&lt;hr&gt;&lt;b&gt;PK&lt;/b&gt; id_especie : INT&lt;br&gt;nome : VARCHAR(100)" vertex="1">
+          <mxGeometry height="150" width="310" x="70" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="m_raca" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=14;" value="&lt;b&gt;RACA&lt;/b&gt;&lt;hr&gt;&lt;b&gt;PK&lt;/b&gt; id_raca : INT&lt;br&gt;nome : VARCHAR(100)&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; id_especie : INT" vertex="1">
+          <mxGeometry height="180" width="310" x="1190" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="m_animal" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=14;" value="&lt;b&gt;ANIMAL&lt;/b&gt;&lt;hr&gt;&lt;b&gt;PK&lt;/b&gt; id_animal : INT&lt;br&gt;nome : VARCHAR(100)&lt;br&gt;sexo : VARCHAR(20)&lt;br&gt;cor : VARCHAR(100)&lt;br&gt;nascimento : DATE&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; id_especie : INT&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; id_raca : INT&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; id_tutor : INT" vertex="1">
+          <mxGeometry height="300" width="400" x="600" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="m_tutor" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;fontSize=14;" value="&lt;b&gt;TUTOR&lt;/b&gt;&lt;hr&gt;&lt;b&gt;PK&lt;/b&gt; id_tutor : INT&lt;br&gt;nome : VARCHAR(150)&lt;br&gt;telefone : VARCHAR(20)" vertex="1">
+          <mxGeometry height="180" width="400" x="600" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="mc1" edge="1" parent="1" source="m_especie" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" target="m_animal" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mc2" edge="1" parent="1" source="m_especie" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" target="m_raca" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mc3" edge="1" parent="1" source="m_raca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" target="m_animal" value="N : 1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mc4" edge="1" parent="1" source="m_tutor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;" target="m_animal" value="N&lt;div&gt;-&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
